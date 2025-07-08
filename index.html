@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PAYMENT JURAGAN</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Rubik', sans-serif;
+      background: url('https://img1.pixhost.to/images/7053/619795397_imgtmp.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 400px;
+      background-color: rgba(255, 255, 255, 0.4); /* transparan */
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .container h2 {
+      margin-bottom: 10px;
+      font-size: 20px;
+      color: #000;
+    }
+
+    .label {
+      font-size: 14px;
+      color: #222;
+    }
+
+    .value {
+      font-size: 16px;
+      margin-bottom: 5px;
+      color: #000;
+    }
+
+    .copy-btn {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: rgba(0, 0, 0, 0.05);
+      border: 1px solid #999;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .qris-img {
+      margin-top: 10px;
+      width: 100%;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>PAYMENT DANA</h2>
+    <div class="label">Nomor:</div>
+    <div class="value">082340159494</div>
+    <div class="label">Atas Nama:</div>
+    <div class="value">Sulastri</div>
+    <button class="copy-btn" onclick="copyText('082340159494')">Salin Nomor</button>
+  </div>
+
+  <div class="container">
+    <h2>PAYMENT GOPAY</h2>
+    <div class="label">Nomor:</div>
+    <div class="value">082340159494</div>
+    <div class="label">Atas Nama:</div>
+    <div class="value">Sulastri</div>
+    <button class="copy-btn" onclick="copyText('082340159494')">Salin Nomor</button>
+  </div>
+
+  <div class="container">
+    <h2>QRIS</h2>
+    <div class="label">Klik untuk memperbesar QR Code</div>
+    <a href="https://img1.pixhost.to/images/7053/619795210_imgtmp.jpg" target="_blank">
+      <img class="qris-img" src="https://img1.pixhost.to/images/7053/619795210_imgtmp.jpg" alt="QRIS PRAA STORE"/>
+    </a>
+    <div class="label">Nama: PRAA STORE</div>
+  </div>
+
+  <script>
+    function copyText(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Nomor berhasil disalin!');
+      });
+    }
+  </script>
+
+</body>
+</html>
