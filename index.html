@@ -3,72 +3,157 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PAYMENT JURAGAN</title>
+  <title>PAYMENT PRAA STORE</title>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       font-family: 'Rubik', sans-serif;
-      background: url('https://img1.pixhost.to/images/7053/619795397_imgtmp.jpg') no-repeat center center fixed;
+      background-color: #0d0d0d;
+      background-image: url('https://img1.pixhost.to/images/7053/619795397_imgtmp.jpg');
       background-size: cover;
-      color: #000;
+      background-attachment: fixed;
+      color: #fff;
+      min-height: 100vh;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 20px;
+      position: relative;
+      overflow-x: hidden;
     }
 
     .container {
       width: 100%;
       max-width: 400px;
-      background-color: rgba(255, 255, 255, 0.4); /* transparan */
-      border: 1px solid rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-      padding: 15px;
-      margin-bottom: 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 30px;
       text-align: center;
+      box-shadow:
+        0 0 8px #999,
+        0 0 15px #aaa,
+        inset 0 0 10px #666,
+        inset 0 0 20px #aaa;
+      animation: float 4s ease-in-out infinite;
+      z-index: 2;
     }
 
-    .container h2 {
-      margin-bottom: 10px;
-      font-size: 20px;
-      color: #000;
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    .glitch {
+      font-size: 22px;
+      font-weight: bold;
+      color: #ccc;
+      position: relative;
+      animation: glitch 2s infinite;
+      text-shadow:
+        0 0 2px #ccc,
+        0 0 6px #999,
+        0 0 10px #fff;
+    }
+
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      20% { transform: translate(-1px, 1px); }
+      40% { transform: translate(-2px, -1px); }
+      60% { transform: translate(1px, 1px); }
+      80% { transform: translate(2px, -1px); }
+      100% { transform: translate(0); }
     }
 
     .label {
       font-size: 14px;
-      color: #222;
+      color: #bbb;
+      margin-top: 10px;
     }
 
     .value {
       font-size: 16px;
+      color: #eee;
       margin-bottom: 5px;
-      color: #000;
     }
 
     .copy-btn {
       margin-top: 10px;
       padding: 8px 16px;
-      background: rgba(0, 0, 0, 0.05);
-      border: 1px solid #999;
+      background: rgba(100, 100, 100, 0.2);
+      border: 1px solid #aaa;
       border-radius: 5px;
       cursor: pointer;
       font-weight: bold;
-      color: #000;
+      color: #eee;
+      box-shadow: 0 0 10px #888;
+      transition: background 0.3s;
+    }
+
+    .copy-btn:hover {
+      background: rgba(150, 150, 150, 0.3);
     }
 
     .qris-img {
       margin-top: 10px;
       width: 100%;
-      border-radius: 8px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(180, 180, 180, 0.5);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 15px #888; }
+      50% { transform: scale(1.03); box-shadow: 0 0 25px #fff; }
+    }
+
+    /* Bintang Jatuh */
+    .star {
+      position: fixed;
+      top: -10px;
+      width: 2px;
+      height: 80px;
+      background: linear-gradient(-45deg, #aaa, transparent);
+      opacity: 0.8;
+      animation: fall linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-100px) translateX(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh) translateX(200px);
+        opacity: 0;
+      }
     }
   </style>
 </head>
 <body>
 
+  <!-- Bintang Jatuh -->
+  <script>
+    for (let i = 0; i < 100; i++) {
+      let star = document.createElement("div");
+      star.className = "star";
+      star.style.left = Math.random() * window.innerWidth + "px";
+      star.style.animationDuration = (Math.random() * 2 + 1) + "s";
+      star.style.opacity = Math.random();
+      document.body.appendChild(star);
+    }
+  </script>
+
+  <!-- DANA -->
   <div class="container">
-    <h2>PAYMENT DANA</h2>
+    <div class="glitch">PAYMENT DANA</div>
     <div class="label">Nomor:</div>
     <div class="value">082340159494</div>
     <div class="label">Atas Nama:</div>
@@ -76,8 +161,9 @@
     <button class="copy-btn" onclick="copyText('082340159494')">Salin Nomor</button>
   </div>
 
+  <!-- GOPAY -->
   <div class="container">
-    <h2>PAYMENT GOPAY</h2>
+    <div class="glitch">PAYMENT GOPAY</div>
     <div class="label">Nomor:</div>
     <div class="value">082340159494</div>
     <div class="label">Atas Nama:</div>
@@ -85,8 +171,9 @@
     <button class="copy-btn" onclick="copyText('082340159494')">Salin Nomor</button>
   </div>
 
+  <!-- QRIS -->
   <div class="container">
-    <h2>QRIS</h2>
+    <div class="glitch">QRIS</div>
     <div class="label">Klik untuk memperbesar QR Code</div>
     <a href="https://img1.pixhost.to/images/7053/619795210_imgtmp.jpg" target="_blank">
       <img class="qris-img" src="https://img1.pixhost.to/images/7053/619795210_imgtmp.jpg" alt="QRIS PRAA STORE"/>
@@ -94,6 +181,7 @@
     <div class="label">Nama: PRAA STORE</div>
   </div>
 
+  <!-- Copy Script -->
   <script>
     function copyText(text) {
       navigator.clipboard.writeText(text).then(() => {
