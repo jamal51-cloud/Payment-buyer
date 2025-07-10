@@ -15,7 +15,7 @@
     body {
       font-family: 'Rubik', sans-serif;
       background-color: #0d0d0d;
-      background-image: url('https://img1.pixhost.to/images/7053/619795397_imgtmp.jpg');
+      background-image: url('https://i.ibb.co/Q73f9MSJ/0c9fb5e7411c.jpg');
       background-size: cover;
       background-attachment: fixed;
       color: #fff;
@@ -37,10 +37,10 @@
       margin-bottom: 30px;
       text-align: center;
       box-shadow:
-        0 0 8px #999,
-        0 0 15px #aaa,
-        inset 0 0 10px #666,
-        inset 0 0 20px #aaa;
+        0 0 10px #ffbb33,
+        0 0 18px #ffaa00,
+        inset 0 0 12px #ff8800,
+        inset 0 0 25px #ffaa33;
       animation: float 4s ease-in-out infinite;
       z-index: 2;
     }
@@ -53,13 +53,13 @@
     .glitch {
       font-size: 22px;
       font-weight: bold;
-      color: #ccc;
+      color: #ffcc66;
       position: relative;
       animation: glitch 2s infinite;
       text-shadow:
-        0 0 2px #ccc,
-        0 0 6px #999,
-        0 0 10px #fff;
+        0 0 3px #ff9900,
+        0 0 6px #ff8800,
+        0 0 10px #ffaa00;
     }
 
     @keyframes glitch {
@@ -73,44 +73,51 @@
 
     .label {
       font-size: 14px;
-      color: #bbb;
+      color: #ffdd99;
       margin-top: 10px;
     }
 
     .value {
       font-size: 16px;
-      color: #eee;
+      color: #fff2cc;
       margin-bottom: 5px;
     }
 
     .copy-btn {
       margin-top: 10px;
       padding: 8px 16px;
-      background: rgba(100, 100, 100, 0.2);
-      border: 1px solid #aaa;
+      background: rgba(255, 170, 0, 0.2);
+      border: 1px solid #ffcc66;
       border-radius: 5px;
       cursor: pointer;
       font-weight: bold;
-      color: #eee;
-      box-shadow: 0 0 10px #888;
-      transition: background 0.3s;
+      color: #fff6e6;
+      box-shadow: 0 0 12px #ffaa00;
+      transition: background 0.3s, box-shadow 0.3s;
     }
 
     .copy-btn:hover {
-      background: rgba(150, 150, 150, 0.3);
+      background: rgba(255, 190, 50, 0.3);
+      box-shadow: 0 0 16px #ffcc33;
     }
 
     .qris-img {
       margin-top: 10px;
       width: 100%;
       border-radius: 10px;
-      box-shadow: 0 0 20px rgba(180, 180, 180, 0.5);
+      box-shadow: 0 0 20px rgba(255, 200, 100, 0.6);
       animation: pulse 2s infinite;
     }
 
     @keyframes pulse {
-      0%, 100% { transform: scale(1); box-shadow: 0 0 15px #888; }
-      50% { transform: scale(1.03); box-shadow: 0 0 25px #fff; }
+      0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 15px #ffbb33;
+      }
+      50% {
+        transform: scale(1.03);
+        box-shadow: 0 0 25px #ffaa00;
+      }
     }
 
     /* Bintang Jatuh */
@@ -119,7 +126,7 @@
       top: -10px;
       width: 2px;
       height: 80px;
-      background: linear-gradient(-45deg, #aaa, transparent);
+      background: linear-gradient(-45deg, #ffaa00, transparent);
       opacity: 0.8;
       animation: fall linear infinite;
       z-index: 0;
